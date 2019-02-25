@@ -1,0 +1,152 @@
+<div id="product" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg accent"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <!-- APP TITLE -->
+            <div fxLayout="row" fxLayoutAlign="start center">
+
+                <button mat-icon-button class="mr-0 mr-sm-16" [routerLink]="'/apps/bill/get'">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+
+                <!-- <div class="product-image mr-8 mr-sm-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}"> -->
+                <!-- <img *ngIf="product.images[0]" [src]="product.images[0].url">
+            <img *ngIf="!product.images[0]" [src]="'assets/images/ecommerce/product-image-placeholder.png'"> -->
+                <!-- </div> -->
+                <!-- 
+        <div fxLayout="column" fxLayoutAlign="start start" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+            <div class="h2">
+                yes
+            </div>
+            <div class="h2">
+                New Product
+            </div> -->
+                <!-- <div class="subtitle secondary-text">
+                <span></span>
+            </div> -->
+                <!-- </div> -->
+            </div>
+            <!-- / APP TITLE -->
+
+            <button mat-raised-button class="save-product-button" [disabled]="productForm.invalid || productForm.pristine"
+                (click)="updateBill( bill_last_month.value, bill_Average.value, bill_address.value)">
+                <span>UPDATE</span>
+            </button>
+            <!-- 
+    <button mat-raised-button class="save-product-button" [disabled]="productForm.invalid || productForm.pristine"
+        (click)="updateCollege(name.value)">
+        <span>SAVE</span>
+    </button> -->
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
+
+                    <mat-tab-group>
+
+                        <mat-tab label="Update">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+
+                                <!-- <mat-form-field class="w-50-p">
+                                    <input matInput name="bill_Name" formControlName="bill_Name" #bill_Name placeholder="Bill Name"
+                                        required [(ngModel)]="datashow.bill_Name">
+                                </mat-form-field>
+                                <br> -->
+                                <mat-form-field class="w-50-p">
+
+                                    <input matInput name="bill_last_month" formControlName="bill_last_month"
+                                        #bill_last_month placeholder="Bill Last Month" required [(ngModel)]="datashow.bill_last_month">
+                                    <mat-error>
+                                        <span *ngIf="productForm.get('bill_last_month').hasError('invalidNumber')">Number
+                                            accepted only!</span>
+                                    </mat-error>
+                                </mat-form-field>
+                                <br>
+                                <mat-form-field class="
+                                        w-50-p">
+
+                                    <input matInput name="bill_Average" formControlName="bill_Average" #bill_Average
+                                        placeholder="Bill Average" required [(ngModel)]="datashow.bill_Average">
+                                    <mat-error>
+                                        <span *ngIf="productForm.get('bill_Average').hasError('invalidNumber')">Number
+                                            accepted only!</span>
+                                    </mat-error>
+                                </mat-form-field>
+
+                                <br>
+                                <mat-form-field class="w-50-p">
+                                    <input matInput name="bill_address" formControlName="bill_address" #bill_address
+                                        placeholder="Bill Address" required [(ngModel)]="datashow.bill_address">
+
+                                </mat-form-field>
+                                <br>
+
+
+                                <!-- <mat-form-field class="w-100-p"> -->
+
+                                <!-- <mat-chip-list #categoryList name="categories" formControlName="categories">
+
+                                <mat-chip *ngFor="let category of product.categories" [removable]="true"
+                                    (removed)="product.removeCategory(category)">
+                                    {{category}}
+                                    <mat-icon matChipRemove>cancel</mat-icon>
+                                </mat-chip> -->
+
+                                <!-- <input matInput name="catagories" formControlName="catagories" placeholder="Categories"
+                                required> -->
+                                <!-- </mat-chip-list> -->
+
+                                <!-- </mat-form-field> -->
+                                <!-- 
+                        <mat-form-field class="w-100-p"> -->
+
+                                <!-- <mat-chip-list #tagList name="tags" formControlName="tags">
+
+                                <mat-chip *ngFor="let tag of product.tags" [removable]="true" (removed)="product.removeTag(tag)">
+                                    {{tag}}
+                                    <mat-icon matChipRemove>cancel</mat-icon>
+                                </mat-chip>
+
+                                <input placeholder="Tags" [matChipInputFor]="tagList" [matChipInputAddOnBlur]="true"
+                                    (matChipInputTokenEnd)="product.addTag($event)" />
+
+                            </mat-chip-list> -->
+
+                                <!-- </mat-form-field> -->
+
+                            </div>
+
+                        </mat-tab>
+
+
+
+
+
+
+                    </mat-tab-group>
+                </form>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+</div>

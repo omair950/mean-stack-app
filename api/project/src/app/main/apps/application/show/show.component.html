@@ -1,0 +1,802 @@
+<div id="product" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <!-- <div class="top-bg accent"></div> -->
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+
+
+        <!-- CONTENT CARD -->
+        <div class="content-card">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <form name="productForm" [formGroup]="productForm" class="product w-100-p" fxLayout="column" fxFlex>
+
+                    <!-- <mat-tab-group>
+
+                        <mat-tab> -->
+                    <h1 style="text-align: center"><u>Application Form</u></h1>
+                    <div class="tab-content p-24" fusePerfectScrollbar>
+
+                        <!-- <mat-form-field class="w-50-p">
+                                <input matInput name="bill_Name" formControlName="bill_Name" #bill_Name placeholder="Bill Name"
+                                    required [(ngModel)]="datashow.bill_Name">
+                            </mat-form-field>
+                            <br> -->
+                        <h1 style="color: grey"><u>Student Details</u></h1>
+                        <br>
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="std_Name" #std_Name formControlName="std_Name" #std_Name placeholder="Stduent Name"
+                                required [(ngModel)]="datashow.std_Name">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('std_Name').touched && productForm.get('std_Name').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="std_F_Name" #std_F_Name formControlName="std_F_Name" placeholder="Father Name"
+                                required [(ngModel)]="datashow.std_F_Name">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('std_F_Name').touched && productForm.get('std_F_Name').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="std_Nic" #std_Nic formControlName="std_Nic" placeholder="Cnic"
+                                required [(ngModel)]="datashow.std_Nic">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('std_Nic').touched && productForm.get('std_Nic').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+                        <mat-form-field class="w-40-p">
+                            <mat-select formControlName="sch_id" #sch_id placeholder="Select Scholarship" [(ngModel)]="datashow.sch_Name"
+                                [value]="datashow.sch_id">
+
+                                <mat-option *ngFor='let b of lcomments' [value]="b.sch_id"> {{b.sch_Name}}
+                                </mat-option>
+
+
+                            </mat-select>
+                            <!-- <mat-error>
+                                <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                              </mat-error> -->
+                        </mat-form-field>
+
+
+                        <br>
+                        <mat-form-field class="w-40-p">
+                            <mat-select formControlName="std_Gender" #std_Gender placeholder="Select Gender"
+                                [(ngModel)]="datashow.std_Gender">
+                                <mat-option>-- Select Any --</mat-option>
+                                <mat-option value=male> Male </mat-option>
+                                <mat-option value=female> Female</mat-option>
+
+                            </mat-select>
+                            <!-- <mat-error>
+                                      <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                                    </mat-error> -->
+                        </mat-form-field>
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+                        <mat-form-field class="w-40-p">
+                            <input type='date' formControlName="std_DOB" #std_DOB matInput placeholder="DOB"
+                                [(ngModel)]="datashow.std_DOB">
+                        </mat-form-field>
+
+
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="std_Phone_no" #std_Phone_no formControlName="std_Phone_no"
+                                placeholder="Mobile Number" required [(ngModel)]="datashow.std_Phone_no">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('std_Phone_no').touched && productForm.get('std_Phone_no').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+                        <mat-form-field class="w-40-p">
+                            <input formControlName="std_Email" #std_Email matInput placeholder="Email" [(ngModel)]="datashow.std_Email">
+                            <mat-error>
+                                <span *ngIf="productForm.get('std_Email').hasError('invalidNumber')"> Enter
+                                    Valid
+                                    Email</span>
+                            </mat-error>
+                            <!-- <mat-hint>use like : demo@demo.com</mat-hint> -->
+                            <!-- <mat-error>
+                                        <span *ngIf="!regiForm.get('std_email').valid && regiForm.get('std_email').touched">Enter
+                                            proper Email !!!</span>
+                                    </mat-error> -->
+                        </mat-form-field>
+                        <br>
+                        <h1 style="color: grey"><u>Guadian Details</u></h1>
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="gaud_Name" formControlName="gaud_Name" #gaud_Name placeholder="Gaudian Name"
+                                required [(ngModel)]="datashow.guad_Name">
+                            <mat-error>
+                                <span *ngIf="productForm.get('gaud_Name').hasError('invalidNumber')">alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+                        <mat-form-field class="w-40-p">
+
+                            <input matInput name="gaud_cnic" formControlName="gaud_cnic" #gaud_cnic placeholder="Gaudian Cnic"
+                                required [(ngModel)]="datashow.guad_Cnic">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('gaud_cnic').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-40-p">
+
+                            <input matInput name="gaud_Income" formControlName="gaud_Income" #gaud_Income placeholder="Gaudian Income"
+                                required [(ngModel)]="datashow.guad_Income">
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+
+                        <mat-form-field class="w-40-p">
+
+                            <mat-select formControlName="pro_id" #pro_id placeholder="Select Profession" [(ngModel)]="datashow.profession"
+                                [value]="datashow.pro_id">
+
+                                <mat-option *ngFor='let a of profession' [value]="a.pro_id"> {{a.profession}}
+                                </mat-option>
+
+
+                            </mat-select>
+                        </mat-form-field>
+
+
+                        <h1 style="color: grey"><u>Address Details</u></h1>
+                        <mat-form-field class="w-85-p">
+                            <input matInput name="temp_add" formControlName="temp_add" #temp_add placeholder="Temporary Address"
+                                required [(ngModel)]="datashow.temp_add">
+                        </mat-form-field>
+
+
+
+
+                        <mat-form-field class="w-85-p">
+
+                            <input matInput name="parmnt_add" formControlName="parmnt_add" #parmnt_add placeholder="Parmiment Address"
+                                required [(ngModel)]="datashow.parmnt_add">
+                        </mat-form-field>
+                        <!-- <mat-error>
+                                <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                              </mat-error> -->
+
+
+                        <br>
+
+                        <mat-form-field class="w-40-p" required>
+                            <mat-select name="add_City" formControlName="add_City" placeholder="Select City" #add_City
+                                required [(ngModel)]="datashow.add_City">
+
+
+                                <mat-option value="gujrat">Gujrat</mat-option>
+                                <mat-option value="Wazirabad">Wazirabad</mat-option>
+                                <mat-option value="lahore">lahore</mat-option>
+                                <mat-option value="Rawalpindi">Rawalpindi</mat-option>
+
+                                <mat-option class="mat-option" value="Abbottabad">Abbottabad</mat-option>
+                                <mat-option class="mat-option" value="Attock">Attock</mat-option>
+                                <mat-option class="mat-option" value="Bahawalpur">Bahawalpur</mat-option>
+                                <mat-option class="mat-option" value="Baden">Baden</mat-option>
+                                <mat-option class="mat-option" value="Bagh">Bagh</mat-option>
+                                <mat-option class="mat-option" value="Bahawalnagar">Bahawalnagar</mat-option>
+                                <mat-option class="mat-option" value="Burewala">Burewala</mat-option>
+                                <mat-option class="mat-option" value="Bannu">Bannu</mat-option>
+                                <mat-option class="mat-option" value="Batagram">Batagram</mat-option>
+                                <mat-option class="mat-option" value="Bazdar">Bazdar</mat-option>
+                                <mat-option class="mat-option" value="Bela">Bela</mat-option>
+                                <mat-option class="mat-option" value="Bellpat">Bellpat</mat-option>
+                                <mat-option class="mat-option" value="Bhag">Bhag</mat-option>
+                                <mat-option class="mat-option" value="Bhakkar">Bhakkar</mat-option>
+                                <mat-option class="mat-option" value="Bhalwal">Bhalwal</mat-option>
+                                <mat-option class="mat-option" value="Bhimber">Bhimber</mat-option>
+                                <mat-option class="mat-option" value="Birote">Birote</mat-option>
+                                <mat-option class="mat-option" value="Buner">Buner</mat-option>
+                                <mat-option class="mat-option" value="Burj">Burj</mat-option>
+                                <mat-option class="mat-option" value="Chiniot">Chiniot</mat-option>
+                                <mat-option class="mat-option" value="Chachro">Chachro</mat-option>
+                                <mat-option class="mat-option" value="Chagai">Chagai</mat-option>
+                                <mat-option class="mat-option" value="Chah Sandan">Chah Sandan</mat-option>
+                                <mat-option class="mat-option" value="Chailianwala">Chailianwala</mat-option>
+                                <mat-option class="mat-option" value="Chakdara">Chakdara</mat-option>
+                                <mat-option class="mat-option" value="Chakku">Chakku</mat-option>
+                                <mat-option class="mat-option" value="Chakwal">Chakwal</mat-option>
+                                <mat-option class="mat-option" value="Chaman">Chaman</mat-option>
+                                <mat-option class="mat-option" value="Charsadda">Charsadda</mat-option>
+                                <mat-option class="mat-option" value="Chhatr">Chhatr</mat-option>
+                                <mat-option class="mat-option" value="Chichawatni">Chichawatni</mat-option>
+                                <mat-option class="mat-option" value="Chitral">Chitral</mat-option>
+                                <mat-option class="mat-option" value="Dadu">Dadu</mat-option>
+                                <mat-option class="mat-option" value="Dera Ghazi Khan">Dera Ghazi Khan</mat-option>
+                                <mat-option class="mat-option" value="Dera Ismail Khan">Dera Ismail Khan</mat-option>
+                                <mat-option class="mat-option" value="Dalbandin">Dalbandin</mat-option>
+                                <mat-option class="mat-option" value="Dargai">Dargai</mat-option>
+                                <mat-option class="mat-option" value="Darya Khan">Darya Khan</mat-option>
+                                <mat-option class="mat-option" value="Daska">Daska</mat-option>
+                                <mat-option class="mat-option" value="Dera Bugti">Dera Bugti</mat-option>
+                                <mat-option class="mat-option" value="Dhana Sar">Dhana Sar</mat-option>
+                                <mat-option class="mat-option" value="Dina City|Dina">Dina</mat-option>
+                                <mat-option class="mat-option" value="Dinga">Dinga</mat-option>
+                                <mat-option class="mat-option" value="Diwana">Diwana</mat-option>
+                                <mat-option class="mat-option" value="Dokri">Dokri</mat-option>
+                                <mat-option class="mat-option" value="Drosh">Drosh</mat-option>
+                                <mat-option class="mat-option" value="Duki">Duki</mat-option>
+                                <mat-option class="mat-option" value="Dushi">Dushi</mat-option>
+                                <mat-option class="mat-option" value="Duzab">Duzab</mat-option>
+                                <mat-option class="mat-option" value="Faisalabad">Faisalabad</mat-option>
+                                <mat-option class="mat-option" value="Fateh Jang">Fateh Jang</mat-option>
+                                <mat-option class="mat-option" value="Ghotki">Ghotki</mat-option>
+                                <mat-option class="mat-option" value="Gwadar">Gwadar</mat-option>
+                                <mat-option class="mat-option" value="Gujranwala">Gujranwala</mat-option>
+                                <mat-option class="mat-option" value="Gujrat">Gujrat</mat-option>
+                                <mat-option class="mat-option" value="Gadra">Gadra</mat-option>
+                                <mat-option class="mat-option" value="Gajar">Gajar</mat-option>
+                                <mat-option class="mat-option" value="Gandava">Gandava</mat-option>
+                                <mat-option class="mat-option" value="Garhi Khairo">Garhi Khairo</mat-option>
+                                <mat-option class="mat-option" value="Garruck">Garruck</mat-option>
+                                <mat-option class="mat-option" value="Ghakhar Mandi">Ghakhar Mandi</mat-option>
+                                <mat-option class="mat-option" value="Ghanian">Ghanian</mat-option>
+                                <mat-option class="mat-option" value="Ghauspur">Ghauspur</mat-option>
+                                <mat-option class="mat-option" value="Ghazluna">Ghazluna</mat-option>
+                                <mat-option class="mat-option" value="Girdan">Girdan</mat-option>
+                                <mat-option class="mat-option" value="Gulistan">Gulistan</mat-option>
+                                <mat-option class="mat-option" value="Gwash">Gwash</mat-option>
+                                <mat-option class="mat-option" value="Hyderabad">Hyderabad</mat-option>
+                                <mat-option class="mat-option" value="Hala">Hala</mat-option>
+                                <mat-option class="mat-option" value="Haripur">Haripur</mat-option>
+                                <mat-option class="mat-option" value="Hab Chauki">Hab Chauki</mat-option>
+                                <mat-option class="mat-option" value="Hafizabad">Hafizabad</mat-option>
+                                <mat-option class="mat-option" value="Hameedabad">Hameedabad</mat-option>
+                                <mat-option class="mat-option" value="Hangu">Hangu</mat-option>
+                                <mat-option class="mat-option" value="Harnai">Harnai</mat-option>
+                                <mat-option class="mat-option" value="Hasilpur">Hasilpur</mat-option>
+                                <mat-option class="mat-option" value="Haveli Lakha">Haveli Lakha</mat-option>
+                                <mat-option class="mat-option" value="Hinglaj">Hinglaj</mat-option>
+                                <mat-option class="mat-option" value="Hoshab">Hoshab</mat-option>
+                                <mat-option class="mat-option" value="Islamabad">Islamabad</mat-option>
+                                <mat-option class="mat-option" value="Islamkot">Islamkot</mat-option>
+                                <mat-option class="mat-option" value="Ispikan">Ispikan</mat-option>
+                                <mat-option class="mat-option" value="Jacobabad">Jacobabad</mat-option>
+                                <mat-option class="mat-option" value="Jamshoro">Jamshoro</mat-option>
+                                <mat-option class="mat-option" value="Jhang">Jhang</mat-option>
+                                <mat-option class="mat-option" value="Jhelum">Jhelum</mat-option>
+                                <mat-option class="mat-option" value="Jamesabad">Jamesabad</mat-option>
+                                <mat-option class="mat-option" value="Jampur">Jampur</mat-option>
+                                <mat-option class="mat-option" value="Janghar">Janghar</mat-option>
+                                <mat-option class="mat-option" value="Jati, Jati(Mughalbhin)">Jati</mat-option>
+                                <mat-option class="mat-option" value="Jauharabad">Jauharabad</mat-option>
+                                <mat-option class="mat-option" value="Jhal">Jhal</mat-option>
+                                <mat-option class="mat-option" value="Jhal Jhao">Jhal Jhao</mat-option>
+                                <mat-option class="mat-option" value="Jhatpat">Jhatpat</mat-option>
+                                <mat-option class="mat-option" value="Jhudo">Jhudo</mat-option>
+                                <mat-option class="mat-option" value="Jiwani">Jiwani</mat-option>
+                                <mat-option class="mat-option" value="Jungshahi">Jungshahi</mat-option>
+                                <mat-option class="mat-option" value="Karachi">Karachi</mat-option>
+                                <mat-option class="mat-option" value="Kotri">Kotri</mat-option>
+                                <mat-option class="mat-option" value="Kalam">Kalam</mat-option>
+                                <mat-option class="mat-option" value="Kalandi">Kalandi</mat-option>
+                                <mat-option class="mat-option" value="Kalat">Kalat</mat-option>
+                                <mat-option class="mat-option" value="Kamalia">Kamalia</mat-option>
+                                <mat-option class="mat-option" value="Kamararod">Kamararod</mat-option>
+                                <mat-option class="mat-option" value="Kamber">Kamber</mat-option>
+                                <mat-option class="mat-option" value="Kamokey">Kamokey</mat-option>
+                                <mat-option class="mat-option" value="Kanak">Kanak</mat-option>
+                                <mat-option class="mat-option" value="Kandi">Kandi</mat-option>
+                                <mat-option class="mat-option" value="Kandiaro">Kandiaro</mat-option>
+                                <mat-option class="mat-option" value="Kanpur">Kanpur</mat-option>
+                                <mat-option class="mat-option" value="Kapip">Kapip</mat-option>
+                                <mat-option class="mat-option" value="Kappar">Kappar</mat-option>
+                                <mat-option class="mat-option" value="Karak City">Karak City</mat-option>
+                                <mat-option class="mat-option" value="Karodi">Karodi</mat-option>
+                                <mat-option class="mat-option" value="Kashmor">Kashmor</mat-option>
+                                <mat-option class="mat-option" value="Kasur">Kasur</mat-option>
+                                <mat-option class="mat-option" value="Katuri">Katuri</mat-option>
+                                <mat-option class="mat-option" value="Keti Bandar">Keti Bandar</mat-option>
+                                <mat-option class="mat-option" value="Khairpur">Khairpur</mat-option>
+                                <mat-option class="mat-option" value="Khanaspur">Khanaspur</mat-option>
+                                <mat-option class="mat-option" value="Khanewal">Khanewal</mat-option>
+                                <mat-option class="mat-option" value="Kharan">Kharan</mat-option>
+                                <mat-option class="mat-option" value="kharian">kharian</mat-option>
+                                <mat-option class="mat-option" value="Khokhropur">Khokhropur</mat-option>
+                                <mat-option class="mat-option" value="Khora">Khora</mat-option>
+                                <mat-option class="mat-option" value="Khushab">Khushab</mat-option>
+                                <mat-option class="mat-option" value="Khuzdar">Khuzdar</mat-option>
+                                <mat-option class="mat-option" value="Kikki">Kikki</mat-option>
+                                <mat-option class="mat-option" value="Klupro">Klupro</mat-option>
+                                <mat-option class="mat-option" value="Kohan">Kohan</mat-option>
+                                <mat-option class="mat-option" value="Kohat">Kohat</mat-option>
+                                <mat-option class="mat-option" value="Kohistan">Kohistan</mat-option>
+                                <mat-option class="mat-option" value="Kohlu">Kohlu</mat-option>
+                                <mat-option class="mat-option" value="Korak">Korak</mat-option>
+                                <mat-option class="mat-option" value="Korangi">Korangi</mat-option>
+                                <mat-option class="mat-option" value="Kot Sarae">Kot Sarae</mat-option>
+                                <mat-option class="mat-option" value="Kotli">Kotli</mat-option>
+                                <mat-option class="mat-option" value="Lahore">Lahore</mat-option>
+                                <mat-option class="mat-option" value="Larkana">Larkana</mat-option>
+                                <mat-option class="mat-option" value="Lahri">Lahri</mat-option>
+                                <mat-option class="mat-option" value="Lakki Marwat">Lakki Marwat</mat-option>
+                                <mat-option class="mat-option" value="Lasbela">Lasbela</mat-option>
+                                <mat-option class="mat-option" value="Latamber">Latamber</mat-option>
+                                <mat-option class="mat-option" value="Layyah">Layyah</mat-option>
+                                <mat-option class="mat-option" value="Leiah">Leiah</mat-option>
+                                <mat-option class="mat-option" value="Liari">Liari</mat-option>
+                                <mat-option class="mat-option" value="Lodhran">Lodhran</mat-option>
+                                <mat-option class="mat-option" value="Loralai">Loralai</mat-option>
+                                <mat-option class="mat-option" value="Lower Dir">Lower Dir</mat-option>
+                                <mat-option class="mat-option" value="Shadan Lund">Shadan Lund</mat-option>
+                                <mat-option class="mat-option" value="Multan">Multan</mat-option>
+                                <mat-option class="mat-option" value="Mandi Bahauddin">Mandi Bahauddin</mat-option>
+                                <mat-option class="mat-option" value="Mansehra">Mansehra</mat-option>
+                                <mat-option class="mat-option" value="Mian Chanu">Mian Chanu</mat-option>
+                                <mat-option class="mat-option" value="Mirpur">Mirpur</mat-option>
+                                <mat-option class="mat-option" value="Moro, Pakistan|Moro">Moro</mat-option>
+                                <mat-option class="mat-option" value="Mardan">Mardan</mat-option>
+                                <mat-option class="mat-option" value="Mach">Mach</mat-option>
+                                <mat-option class="mat-option" value="Madyan">Madyan</mat-option>
+                                <mat-option class="mat-option" value="Malakand">Malakand</mat-option>
+                                <mat-option class="mat-option" value="Mand">Mand</mat-option>
+                                <mat-option class="mat-option" value="Manguchar">Manguchar</mat-option>
+                                <mat-option class="mat-option" value="Mashki Chah">Mashki Chah</mat-option>
+                                <mat-option class="mat-option" value="Maslti">Maslti</mat-option>
+                                <mat-option class="mat-option" value="Mastuj">Mastuj</mat-option>
+                                <mat-option class="mat-option" value="Mastung">Mastung</mat-option>
+                                <mat-option class="mat-option" value="Mathi">Mathi</mat-option>
+                                <mat-option class="mat-option" value="Matiari">Matiari</mat-option>
+                                <mat-option class="mat-option" value="Mehar">Mehar</mat-option>
+                                <mat-option class="mat-option" value="Mekhtar">Mekhtar</mat-option>
+                                <mat-option class="mat-option" value="Merui">Merui</mat-option>
+                                <mat-option class="mat-option" value="Mianwali">Mianwali</mat-option>
+                                <mat-option class="mat-option" value="Mianez">Mianez</mat-option>
+                                <mat-option class="mat-option" value="Mirpur Batoro">Mirpur Batoro</mat-option>
+                                <mat-option class="mat-option" value="Mirpur Khas">Mirpur Khas</mat-option>
+                                <mat-option class="mat-option" value="Mirpur Sakro">Mirpur Sakro</mat-option>
+                                <mat-option class="mat-option" value="Mithi">Mithi</mat-option>
+                                <mat-option class="mat-option" value="Mongora">Mongora</mat-option>
+                                <mat-option class="mat-option" value="Murgha Kibzai">Murgha Kibzai</mat-option>
+                                <mat-option class="mat-option" value="Muridke">Muridke</mat-option>
+                                <mat-option class="mat-option" value="Musa Khel Bazar">Musa Khel Bazar</mat-option>
+                                <mat-option class="mat-option" value="Muzaffar Garh">Muzaffar Garh</mat-option>
+                                <mat-option class="mat-option" value="Muzaffarabad">Muzaffarabad</mat-option>
+                                <mat-option class="mat-option" value="Nawabshah">Nawabshah</mat-option>
+                                <mat-option class="mat-option" value="Nazimabad">Nazimabad</mat-option>
+                                <mat-option class="mat-option" value="Nowshera">Nowshera</mat-option>
+                                <mat-option class="mat-option" value="Nagar Parkar">Nagar Parkar</mat-option>
+                                <mat-option class="mat-option" value="Nagha Kalat">Nagha Kalat</mat-option>
+                                <mat-option class="mat-option" value="Nal">Nal</mat-option>
+                                <mat-option class="mat-option" value="Naokot">Naokot</mat-option>
+                                <mat-option class="mat-option" value="Nasirabad">Nasirabad</mat-option>
+                                <mat-option class="mat-option" value="Nauroz Kalat">Nauroz Kalat</mat-option>
+                                <mat-option class="mat-option" value="Naushara">Naushara</mat-option>
+                                <mat-option class="mat-option" value="Nur Gamma">Nur Gamma</mat-option>
+                                <mat-option class="mat-option" value="Nushki">Nushki</mat-option>
+                                <mat-option class="mat-option" value="Nuttal">Nuttal</mat-option>
+                                <mat-option class="mat-option" value="Okara">Okara</mat-option>
+                                <mat-option class="mat-option" value="Ormara">Ormara</mat-option>
+                                <mat-option class="mat-option" value="Peshawar">Peshawar</mat-option>
+                                <mat-option class="mat-option" value="Panjgur">Panjgur</mat-option>
+                                <mat-option class="mat-option" value="Pasni City">Pasni City</mat-option>
+                                <mat-option class="mat-option" value="Paharpur">Paharpur</mat-option>
+                                <mat-option class="mat-option" value="Palantuk">Palantuk</mat-option>
+                                <mat-option class="mat-option" value="Pendoo">Pendoo</mat-option>
+                                <mat-option class="mat-option" value="Piharak">Piharak</mat-option>
+                                <mat-option class="mat-option" value="Pirmahal">Pirmahal</mat-option>
+                                <mat-option class="mat-option" value="Pishin">Pishin</mat-option>
+                                <mat-option class="mat-option" value="Plandri">Plandri</mat-option>
+                                <mat-option class="mat-option" value="Pokran">Pokran</mat-option>
+                                <mat-option class="mat-option" value="Pounch">Pounch</mat-option>
+                                <mat-option class="mat-option" value="Quetta">Quetta</mat-option>
+                                <mat-option class="mat-option" value="Qambar">Qambar</mat-option>
+                                <mat-option class="mat-option" value="Qamruddin Karez">Qamruddin Karez</mat-option>
+                                <mat-option class="mat-option" value="Qazi Ahmad">Qazi Ahmad</mat-option>
+                                <mat-option class="mat-option" value="Qila Abdullah">Qila Abdullah</mat-option>
+                                <mat-option class="mat-option" value="Qila Ladgasht">Qila Ladgasht</mat-option>
+                                <mat-option class="mat-option" value="Qila Safed">Qila Safed</mat-option>
+                                <mat-option class="mat-option" value="Qila Saifullah">Qila Saifullah</mat-option>
+                                <mat-option class="mat-option" value="Rawalpindi">Rawalpindi</mat-option>
+                                <mat-option class="mat-option" value="Rabwah">Rabwah</mat-option>
+                                <mat-option class="mat-option" value="Rahim Yar Khan">Rahim Yar Khan</mat-option>
+                                <mat-option class="mat-option" value="Rajan Pur">Rajan Pur</mat-option>
+                                <mat-option class="mat-option" value="Rakhni">Rakhni</mat-option>
+                                <mat-option class="mat-option" value="Ranipur">Ranipur</mat-option>
+                                <mat-option class="mat-option" value="Ratodero">Ratodero</mat-option>
+                                <mat-option class="mat-option" value="Rawalakot">Rawalakot</mat-option>
+                                <mat-option class="mat-option" value="Renala Khurd">Renala Khurd</mat-option>
+                                <mat-option class="mat-option" value="Robat Thana">Robat Thana</mat-option>
+                                <mat-option class="mat-option" value="Rodkhan">Rodkhan</mat-option>
+                                <mat-option class="mat-option" value="Rohri">Rohri</mat-option>
+                                <mat-option class="mat-option" value="Sialkot">Sialkot</mat-option>
+                                <mat-option class="mat-option" value="Sadiqabad">Sadiqabad</mat-option>
+                                <mat-option class="mat-option" value="Safdar Abad- (Dhaban Singh)">Safdar Abad</mat-option>
+                                <mat-option class="mat-option" value="Sahiwal">Sahiwal</mat-option>
+                                <mat-option class="mat-option" value="Saidu Sharif">Saidu Sharif</mat-option>
+                                <mat-option class="mat-option" value="Saindak">Saindak</mat-option>
+                                <mat-option class="mat-option" value="Sakrand">Sakrand</mat-option>
+                                <mat-option class="mat-option" value="Sanjawi">Sanjawi</mat-option>
+                                <mat-option class="mat-option" value="Sargodha">Sargodha</mat-option>
+                                <mat-option class="mat-option" value="Saruna">Saruna</mat-option>
+                                <mat-option class="mat-option" value="Shabaz Kalat">Shabaz Kalat</mat-option>
+                                <mat-option class="mat-option" value="Shadadkhot">Shadadkhot</mat-option>
+                                <mat-option class="mat-option" value="Shahbandar">Shahbandar</mat-option>
+                                <mat-option class="mat-option" value="Shahpur">Shahpur</mat-option>
+                                <mat-option class="mat-option" value="Shahpur Chakar">Shahpur Chakar</mat-option>
+                                <mat-option class="mat-option" value="Shakargarh">Shakargarh</mat-option>
+                                <mat-option class="mat-option" value="Shangla">Shangla</mat-option>
+                                <mat-option class="mat-option" value="Sharam Jogizai">Sharam Jogizai</mat-option>
+                                <mat-option class="mat-option" value="Sheikhupura">Sheikhupura</mat-option>
+                                <mat-option class="mat-option" value="Shikarpur">Shikarpur</mat-option>
+                                <mat-option class="mat-option" value="Shingar">Shingar</mat-option>
+                                <mat-option class="mat-option" value="Shorap">Shorap</mat-option>
+                                <mat-option class="mat-option" value="Sibi">Sibi</mat-option>
+                                <mat-option class="mat-option" value="Sohawa">Sohawa</mat-option>
+                                <mat-option class="mat-option" value="Sonmiani">Sonmiani</mat-option>
+                                <mat-option class="mat-option" value="Sooianwala">Sooianwala</mat-option>
+                                <mat-option class="mat-option" value="Spezand">Spezand</mat-option>
+                                <mat-option class="mat-option" value="Spintangi">Spintangi</mat-option>
+                                <mat-option class="mat-option" value="Sui">Sui</mat-option>
+                                <mat-option class="mat-option" value="Sujawal">Sujawal</mat-option>
+                                <mat-option class="mat-option" value="Sukkur">Sukkur</mat-option>
+                                <mat-option class="mat-option" value="Suntsar">Suntsar</mat-option>
+                                <mat-option class="mat-option" value="Surab">Surab</mat-option>
+                                <mat-option class="mat-option" value="Swabi">Swabi</mat-option>
+                                <mat-option class="mat-option" value="Swat">Swat</mat-option>
+                                <mat-option class="mat-option" value="Tando Adam">Tando Adam</mat-option>
+                                <mat-option class="mat-option" value="Tando Bago">Tando Bago</mat-option>
+                                <mat-option class="mat-option" value="Tangi">Tangi</mat-option>
+                                <mat-option class="mat-option" value="Tank City">Tank City</mat-option>
+                                <mat-option class="mat-option" value="Tar Ahamd Rind">Tar Ahamd Rind</mat-option>
+                                <mat-option class="mat-option" value="Thalo">Thalo</mat-option>
+                                <mat-option class="mat-option" value="Thatta">Thatta</mat-option>
+                                <mat-option class="mat-option" value="Toba Tek Singh">Toba Tek Singh</mat-option>
+                                <mat-option class="mat-option" value="Tordher">Tordher</mat-option>
+                                <mat-option class="mat-option" value="Tujal">Tujal</mat-option>
+                                <mat-option class="mat-option" value="Tump">Tump</mat-option>
+                                <mat-option class="mat-option" value="Turbat">Turbat</mat-option>
+                                <mat-option class="mat-option" value="Umarao">Umarao</mat-option>
+                                <mat-option class="mat-option" value="Umarkot">Umarkot</mat-option>
+                                <mat-option class="mat-option" value="Upper Dir">Upper Dir</mat-option>
+                                <mat-option class="mat-option" value="Uthal">Uthal</mat-option>
+                                <mat-option class="mat-option" value="Vehari">Vehari</mat-option>
+                                <mat-option class="mat-option" value="Veirwaro">Veirwaro</mat-option>
+                                <mat-option class="mat-option" value="Vitakri">Vitakri</mat-option>
+                                <mat-option class="mat-option" value="Wadh">Wadh</mat-option>
+                                <mat-option class="mat-option" value="Wah Cantt">Wah Cantt</mat-option>
+                                <mat-option class="mat-option" value="Warah">Warah</mat-option>
+                                <mat-option class="mat-option" value="Washap">Washap</mat-option>
+                                <mat-option class="mat-option" value="Wasjuk">Wasjuk</mat-option>
+                                <mat-option class="mat-option" value="Wazirabad">Wazirabad</mat-option>
+                                <mat-option class="mat-option" value="Yakmach">Yakmach</mat-option>
+                                <mat-option class="mat-option" value="Zhob">Zhob</mat-option>
+
+                            </mat-select>
+                            <!-- <mat-error>
+                                <span *ngIf="!regiForm.get('add_City').valid && regiForm.get('add_City').touched">Please
+                                    select city
+                                    Name!!!</span>
+                            </mat-error> -->
+                        </mat-form-field>
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+                        <mat-form-field class="w-40-p">
+                            <mat-select formControlName="add_province" #add_province placeholder="Select Province"
+                                [(ngModel)]="datashow.add_province" [value]="datashow.add_province">
+
+                                <mat-option value="punjab">Punjab</mat-option>
+                                <mat-option value="sindh">Sindh</mat-option>
+                                <mat-option value="kpk">KPK</mat-option>
+                                <mat-option value="balochistan">Balochistan</mat-option>
+                                <mat-option value="kashmir">Azad Kashmir</mat-option>
+                                <mat-option value="gilgit">Gilgit Baltistan</mat-option>
+
+                            </mat-select>
+                            <!-- <mat-error>
+                                              <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                                            </mat-error> -->
+                        </mat-form-field>
+
+
+                        <h1 style="color: grey"><u>Bill Details</u></h1>
+
+                        <mat-form-field class="w-40-p">
+
+                            <input matInput name="bill_last_month" formControlName="bill_last_month" #bill_last_month
+                                placeholder="Bill Last Month" required [(ngModel)]="datashow.bill_last_month">
+                            <mat-error>
+                                <span *ngIf="productForm.get('bill_last_month').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+                        <mat-form-field class="
+                              w-40-p">
+
+                            <input matInput name="bill_Average" formControlName="bill_Average" #bill_Average
+                                placeholder="Bill Average" required [(ngModel)]="datashow.bill_Average">
+                            <mat-error>
+                                <span *ngIf="productForm.get('bill_Average').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="w-85-p">
+                            <input matInput name="bill_address" formControlName="bill_address" #bill_address
+                                placeholder="Bill Address" required [(ngModel)]="datashow.bill_address">
+
+                        </mat-form-field>
+
+
+
+                        <h1 style="color: grey"><u>Educational Details</u></h1>
+
+                        <mat-form-field class="w-40-p">
+
+                            <mat-select formControlName="clg_id" #clg_id placeholder="Select College" [(ngModel)]="datashow.clg_Name"
+                                [value]="datashow.clg_id">
+
+                                <mat-option *ngFor='let a of colleges' [value]="a.clg_id"> {{a.clg_Name}}
+                                </mat-option>
+
+
+                            </mat-select>
+
+
+
+                            <!-- <mat-error>
+                            <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                          </mat-error> -->
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+                        <mat-form-field class="w-40-p">
+                            <mat-select formControlName="sub_id" #sub_id placeholder="Select Subject" [(ngModel)]="datashow.subj_Group_department"
+                                [value]="datashow.subj_id">
+
+                                <mat-option *ngFor='let c of subjects' [value]="c.sub_id">
+                                    {{c.subj_Group_department}}
+                                </mat-option>
+                                <!-- value={{c.sub_id}} -->
+
+                            </mat-select>
+                            <!-- <mat-error>
+                              <span *ngIf="!regiForm.get('std_gender').valid && regiForm.get('std_gender').touched">Please select Gender !!!</span>
+                            </mat-error> -->
+                        </mat-form-field>
+
+                        <h1 style="color: grey"><u>Academic Details</u></h1>
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="last_degree_tittle" formControlName="last_degree_tittle"
+                                #last_degree_tittle placeholder="Last Degree Title" required [(ngModel)]="datashow.last_degree_tittle">
+                            <mat-error>
+                                <span *ngIf="productForm.get('last_degree_tittle').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+
+                        <mat-form-field class="w-40-p">
+
+                            <input matInput name="board_university_last_exam" formControlName="board_university_last_exam"
+                                #board_university_last_exam placeholder="Board/University Last Exam" required
+                                [(ngModel)]="datashow.board_university_last_exam">
+                            <mat-error>
+                                <span *ngIf="productForm.get('board_university_last_exam').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <mat-form-field class="w-40-p">
+
+                            <input matInput name="last_exam_marks_obt" formControlName="last_exam_marks_obt"
+                                #last_exam_marks_obt placeholder="Last Exam Marks Obtain" required [(ngModel)]="datashow.last_exam_marks_obt">
+                            <mat-error>
+                                <span *ngIf="productForm.get('last_exam_marks_obt').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="last_exam_total_marks" formControlName="last_exam_total_marks"
+                                #last_exam_total_marks placeholder="Last Exam Total Marks " required [(ngModel)]="datashow.last_exam_total_marks">
+                            <mat-error>
+                                <span *ngIf="productForm.get('last_exam_total_marks').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="percentage_last_exam" formControlName="percentage_last_exam"
+                                #percentage_last_exam placeholder="Percentage Last Exam" required [(ngModel)]="datashow.percentage_last_exam">
+                            <mat-error>
+                                <span *ngIf="productForm.get('percentage_last_exam').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="grade_last_exam" formControlName="grade_last_exam" #grade_last_exam
+                                placeholder="Grade Last Exam " required [(ngModel)]="datashow.grade_last_exam">
+
+                            <mat-error>
+                                <span *ngIf="productForm.get('grade_last_exam').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="percentage_last_exam" formControlName="percentage_last_exam"
+                                #percentage_last_exam placeholder="Percentage Last Exam" required [(ngModel)]="datashow.percentage_last_exam">
+                            <mat-error>
+                                <span *ngIf="productForm.get('percentage_last_exam').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="year_passing_last_exam" formControlName="year_passing_last_exam"
+                                #year_passing_last_exam placeholder="Year Passing last Exam " required [(ngModel)]="datashow.year_passing_last_exam">
+                            <mat-error>
+                                <span *ngIf="productForm.get('year_passing_last_exam').hasError('invalidNumber')">
+                                    Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+
+
+                        <mat-form-field class="w-40-p">
+                            <input type="date" matInput name="admission_date_current_degree" formControlName="admission_date_current_degree"
+                                #admission_date_current_degree placeholder="Admission Date Current Degree" required
+                                [(ngModel)]="datashow.admission_date_current_degree">
+
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="current_degree_tittle" formControlName="current_degree_tittle"
+                                #current_degree_tittle placeholder="Current Degree Title" required [(ngModel)]="datashow.current_degree_tittle">
+                            <mat-error>
+                                <span *ngIf="productForm.get('current_degree_tittle').hasError('invalidNumber')">Alphabet
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+
+
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="current_study_year" formControlName="current_study_year"
+                                #current_study_year placeholder="Current Study Year " required [(ngModel)]="datashow.current_study_year">
+                            <mat-error>
+                                <span *ngIf="productForm.get('current_study_year').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+
+
+                        <span style="margin-right: 70px">&nbsp; &nbsp; </span>
+
+                        <mat-form-field class="w-40-p">
+                            <input matInput name="current_degree_fee_amount" formControlName="current_degree_fee_amount"
+                                #current_degree_fee_amount placeholder="Current Degree Fee Amount " required
+                                [(ngModel)]="datashow.current_degree_fee_amount">
+                            <mat-error>
+                                <span *ngIf="productForm.get('current_degree_fee_amount').hasError('invalidNumber')">Number
+                                    accepted only!</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <!-- <mat-form-field class="w-100-p"> -->
+
+                        <!-- <mat-chip-list #categoryList name="categories" formControlName="categories">
+
+                            <mat-chip *ngFor="let category of product.categories" [removable]="true"
+                                (removed)="product.removeCategory(category)">
+                                {{category}}
+                                <mat-icon matChipRemove>cancel</mat-icon>
+                            </mat-chip> -->
+
+                        <!-- <input matInput name="catagories" formControlName="catagories" placeholder="Categories"
+                            required> -->
+                        <!-- </mat-chip-list> -->
+
+                        <!-- </mat-form-field> -->
+                        <!-- 
+                    <mat-form-field class="w-100-p"> -->
+
+                        <!-- <mat-chip-list #tagList name="tags" formControlName="tags">
+
+                            <mat-chip *ngFor="let tag of product.tags" [removable]="true" (removed)="product.removeTag(tag)">
+                                {{tag}}
+                                <mat-icon matChipRemove>cancel</mat-icon>
+                            </mat-chip>
+
+                            <input placeholder="Tags" [matChipInputFor]="tagList" [matChipInputAddOnBlur]="true"
+                                (matChipInputTokenEnd)="product.addTag($event)" />
+
+                        </mat-chip-list> -->
+
+                        <!-- </mat-form-field> -->
+
+                    </div>
+
+                    <!-- </mat-tab> -->
+
+
+
+
+
+
+                    <!-- </mat-tab-group> -->
+                </form>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+</div>
